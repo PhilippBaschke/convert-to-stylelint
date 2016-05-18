@@ -1,0 +1,45 @@
+{
+  "name": "convert-to-stylelint",
+  "version": "0.0.0",
+  "description": "Automatically convert linter configurations to a stylelint configuration.",
+  "main": "lib/index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "src"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf lib",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilippBaschke/convert-to-stylelint.git"
+  },
+  "keywords": [
+    "css",
+    "csslint",
+    "lint",
+    "linter",
+    "configuration",
+    "stylelint",
+    "scss-lint"
+  ],
+  "author": "Philipp Baschke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhilippBaschke/convert-to-stylelint/issues"
+  },
+  "homepage": "https://github.com/PhilippBaschke/convert-to-stylelint#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "rimraf": "^2.5.2"
+  }
+}
