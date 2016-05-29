@@ -1,0 +1,9 @@
+# Ensure container based infrastructure
+sudo: false
+
+# Node versions
+language: node_js
+node_js:
+  - '6' # Current
+  - '4' # LTS
+  - '0.12' # Legacy
