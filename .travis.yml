@@ -7,3 +7,6 @@ node_js:
   - '6' # Current
   - '4' # LTS
   - '0.12' # Legacy
+
+# Coveralls
+after_success: npm run coverage
