@@ -3,3 +3,6 @@ node_modules
 
 # ES5 Code (transpiled by babel)
 lib
+
+# nyc (code coverage) output
+.nyc_output
