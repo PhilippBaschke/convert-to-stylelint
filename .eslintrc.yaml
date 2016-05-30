@@ -1,6 +1,7 @@
-# Use babel to parse ES6
-# http://eslint.org/docs/user-guide/configuring#specifying-parser
-parser: babel-eslint
+# Use ES6 import and export
+# http://eslint.org/docs/user-guide/configuring#specifying-parser-options
+parserOptions:
+  sourceType: module
 
 # Define global variables for the following environments
 # http://eslint.org/docs/user-guide/configuring#specifying-environments
