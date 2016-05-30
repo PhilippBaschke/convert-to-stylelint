@@ -8,6 +8,7 @@
     "lib": "src"
   },
   "scripts": {
+    "watch": "npm-watch",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint:md": "remark . --quiet --frail",
     "lint": "run-p lint:*",
@@ -50,6 +51,7 @@
     "coveralls": "^2.11.9",
     "eslint": "^2.10.2",
     "npm-run-all": "^2.1.1",
+    "npm-watch": "^0.1.4",
     "nyc": "^6.4.4",
     "remark": "^4.2.2",
     "remark-lint": "^3.2.1",
@@ -61,5 +63,11 @@
     "require": [
       "babel-register"
     ]
+  },
+  "watch": {
+    "tape": {
+      "patterns": ["src", "tests"],
+      "quiet": "true"
+    }
   }
 }
