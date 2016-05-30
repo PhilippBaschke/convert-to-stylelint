@@ -10,3 +10,7 @@ node_js:
 
 # Coveralls
 after_success: npm run coverage
+
+# Email notifications
+notifications:
+  email: false
