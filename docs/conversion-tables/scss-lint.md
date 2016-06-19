@@ -43,7 +43,7 @@ in the table.
 | **[HexValidation][]** *enabled*<br> | **[color-no-invalid-hex][]** `true` |
 | **[IdSelector][]** *enabled* | **[selector-no-id][]** `true` |
 | **[ImportantRule][]** *enabled* | **[declaration-no-important][]** `true` |
-| **[ImportPath][]** *enabled*<br>**`leading_underscore`**<br>`true`<br>`false` *default*<br><br>**`filename_extension`**<br>`true`<br>`false` *default* | Plugin: [stylelint-scss][stylelint-scss]<br>[at-import-no-partial-leading-underscore]<br>`true`<br><br>[at-import-no-partial-extension]<br>`true`<br> |
+| **[ImportPath][]** *enabled*<br>**`leading_underscore`**<br>`true`<br>`false` *default*<br><br>**`filename_extension`**<br>`true`<br>`false` *default* | Plugin: [stylelint-scss][stylelint-scss]<br>[at-import-no-partial-leading-underscore][]<br>`true`<br><br>[at-import-no-partial-extension][]<br>`true`<br> |
 | **[Indentation][]** *enabled*<br>**`allow_non_nested_indentation`**<br>`true`<br>`false` *default*<br><br>**`character`**<br>`tab`<br>`space` *default*<br><br>**`width`**<br>`number` *default: `2`* | **[indentation][stylelint-indentation]**<br>**`hierarchicalSelectors`**<br>`true`<br>`false`<br><br><br>`tab`<br>`number`<br><br><br>`number` |
 | **[LeadingZero][]** *enabled*<br>**`style`**<br>`exlude_zero` *default*<br>`include_zero` | **[number-leading-zero][]**<br><br>`never`<br>`always` |
 | **[MergeableSelector][]** *enabled*<br>**`force_nesting`**<br>`true` *default*<br>`false`<br><br>**`whitelist`**<br>`array` | **[no-duplicate-selectors][]** `true`<br>-<br><br><br><br>-<br><br> |
@@ -78,7 +78,7 @@ in the table.
 | **[UnnecessaryMantissa][]** *enabled*<br> | **[number-no-trailing-zeros][]** `true` |
 | **[UnnecessaryParentReference][]** *enabled*<br> | **[selector-no-redundant-nesting-selector][]** `true`<br>(Plugin: [stylelint-scss][selector-no-redundant-nesting-selector]) |
 | **[UrlFormat][]** *enabled*<br> | - |
-| **[UrlQuotes][]** *enabled*<br> | **[function-url-quotes][]** `always|never (single or double determined by `string-quotes)` |
+| **[UrlQuotes][]** *enabled*<br> | **[function-url-quotes][]** `always|never` (single or double determined by `string-quotes`) |
 | **[VariableForProperty][]** *disabled*<br>**`properties`**<br>`array` | - |
 | **[VendorPrefix][]** *enabled*<br><br><br><br><br>**`identifier_list`**<br>`base` *default*<br>`bourbon`<br>`array`<br><br>**`additional_identifiers`**<br>`array` *default `[]`*<br><br>**`excluded_identifiers`**<br>`array` *default `[]`* | **[property-no-vendor-prefix][]** `true` / <br> **[selector-no-vendor-prefix][]** `true` /<br>**[media-feature-name-no-vendor-prefix][]** `true` /<br>**[at-rule-no-vendor-prefix][]** `true` /<br>**[value-no-vendor-prefix][]** `true`<br>-<br><br><br><br><br>-<br><br><br>-<br><br> |
 | **[ZeroUnit][]** *enabled*<br> | **[number-zero-length-no-unit][]** `true` | 
@@ -154,7 +154,6 @@ table-cell-padding-->
 [declaration-bang-space-after]: https://github.com/stylelint/stylelint/blob/master/src/rules/declaration-bang-space-after/README.md
 [color-named]: https://github.com/stylelint/stylelint/blob/master/src/rules/color-named/README.md
 [declaration-use-variable]: https://github.com/sh-waqar/stylelint-declaration-use-variable
-[number-no-trailing-zeros]: https://github.com/stylelint/stylelint/tree/master/src/rules/number-no-trailing-zeros
 [value-border-zero]: https://github.com/timothyneiljohnson/stylelint-value-border-zero
 [property-unknown]: https://github.com/timothyneiljohnson/stylelint-property-unknown
 [stylelint-scss]: https://github.com/kristerkari/stylelint-scss
