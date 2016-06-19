@@ -23,7 +23,7 @@ in the table.
 | --------------------------- | ----------------------- |
 | **[BangFormat][]** *enabled*<br>**`space_before_bang`**<br>`true` *default*<br>`false`<br><br>**`space_after_bang`**<br>`true`<br>`false` *default* | **[declaration-bang-space-before][] / [declaration-bang-space-after][]**<br>**`declaration-bang-space-before`**<br>`always`<br>`never`<br><br>**`declaration-bang-space-after`**<br>`always`<br>`never` |
 | **[BemDepth][]** *disabled*<br>**`max_elements`**<br>`number` *default: `1`* | - |
-| **[BorderZero][]** *enabled*<br>**`convention`**<br>`zero` *default*<br>`none` | **[value-border-zero][]**<br> `"convention": "0"`<br>`"convention": "none"`<br>(Plugin: [stylelint-value-border-zero][value-border-zero]) |
+| **[BorderZero][]** *enabled*<br>**`convention`**<br>`zero` *default*<br>`none` | **[property-value-blacklist][]**<br> `"/^border/": ["none"]`<br>`"/^border/": ["0"]` |
 | **[ChainedClasses][]** *disabled* | - |
 | **[ColorKeyword][]** *enabled* | **[color-named][]** `never` |
 | **[ColorVariable][]** *enabled*<br><br> | **[declaration-use-variable][]** `color`<br>(Plugin: [stylelint-declaration-use-variable][declaration-use-variable]) |
@@ -154,7 +154,7 @@ table-cell-padding-->
 [declaration-bang-space-after]: https://github.com/stylelint/stylelint/blob/master/src/rules/declaration-bang-space-after/README.md
 [color-named]: https://github.com/stylelint/stylelint/blob/master/src/rules/color-named/README.md
 [declaration-use-variable]: https://github.com/sh-waqar/stylelint-declaration-use-variable
-[value-border-zero]: https://github.com/timothyneiljohnson/stylelint-value-border-zero
+[property-value-blacklist]: https://github.com/stylelint/stylelint/blob/master/src/rules/property-value-blacklist/README.md
 [property-unknown]: https://github.com/timothyneiljohnson/stylelint-property-unknown
 [stylelint-scss]: https://github.com/kristerkari/stylelint-scss
 [at-import-no-partial-extension]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-extension/README.md
