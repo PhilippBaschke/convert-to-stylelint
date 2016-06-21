@@ -23,7 +23,7 @@ in the table.
 | --------------------------- | ----------------------- |
 | **[BangFormat][]** *enabled*<br>**`space_before_bang`**<br>`true` *default*<br>`false`<br><br>**`space_after_bang`**<br>`true`<br>`false` *default* | **[declaration-bang-space-before][] / [declaration-bang-space-after][]**<br>**`declaration-bang-space-before`**<br>`always`<br>`never`<br><br>**`declaration-bang-space-after`**<br>`always`<br>`never` |
 | **[BemDepth][]** *disabled*<br>**`max_elements`**<br>`number` *default: `1`* | - |
-| **[BorderZero][]** *enabled*<br>**`convention`**<br>`zero` *default*<br>`none` | - |
+| **[BorderZero][]** *enabled*<br>**`convention`**<br>`zero` *default*<br>`none` | **[property-value-blacklist][]**<br> `"/^border/": ["none"]`<br>`"/^border/": ["0"]` |
 | **[ChainedClasses][]** *disabled* | - |
 | **[ColorKeyword][]** *enabled* | **[color-named][]** `never` |
 | **[ColorVariable][]** *enabled*<br><br> | **[declaration-use-variable][]** `color`<br>(Plugin: [stylelint-declaration-use-variable][declaration-use-variable]) |
@@ -43,7 +43,7 @@ in the table.
 | **[HexValidation][]** *enabled*<br> | **[color-no-invalid-hex][]** `true` |
 | **[IdSelector][]** *enabled* | **[selector-no-id][]** `true` |
 | **[ImportantRule][]** *enabled* | **[declaration-no-important][]** `true` |
-| **[ImportPath][]** *enabled*<br>**`leading_underscore`**<br>`true`<br>`false` *default*<br><br>**`filename_extension`**<br>`true`<br>`false` *default* | - |
+| **[ImportPath][]** *enabled*<br>**`leading_underscore`**<br>`true`<br>`false` *default*<br><br>**`filename_extension`**<br>`true`<br>`false` *default* | Plugin: [stylelint-scss][stylelint-scss]<br>[at-import-no-partial-leading-underscore][]<br>`true`<br><br>[at-import-no-partial-extension][]<br>`true`<br> |
 | **[Indentation][]** *enabled*<br>**`allow_non_nested_indentation`**<br>`true`<br>`false` *default*<br><br>**`character`**<br>`tab`<br>`space` *default*<br><br>**`width`**<br>`number` *default: `2`* | **[indentation][stylelint-indentation]**<br>**`hierarchicalSelectors`**<br>`true`<br>`false`<br><br><br>`tab`<br>`number`<br><br><br>`number` |
 | **[LeadingZero][]** *enabled*<br>**`style`**<br>`exlude_zero` *default*<br>`include_zero` | **[number-leading-zero][]**<br><br>`never`<br>`always` |
 | **[MergeableSelector][]** *enabled*<br>**`force_nesting`**<br>`true` *default*<br>`false`<br><br>**`whitelist`**<br>`array` | **[no-duplicate-selectors][]** `true`<br>-<br><br><br><br>-<br><br> |
@@ -53,8 +53,8 @@ in the table.
 | **[PrivateNamingConvention][]** *disabled*<br>**`prefix`**<br>`string` *default `_`* | - |
 | **[PropertyCount][]** *disabled*<br>**`include_nested`**<br>`true`<br>`false`<br><br>**`max_properties`**<br>`number` | - |
 | **[PropertySortOrder][]** *enabled*<br>**`ignore_unspecified`**<br>`true`<br>`false` *default*<br><br>**`min_properties`**<br>`number` *default `2`*<br><br>**`order`**<br>`array`<br>`array with empty elements`<br>`nil` *default*<br>`concentric`<br>`recess`<br>`smacss`<br><br>**`separate_groups`**<br>`true`<br>`false` | **[declaration-block-properties-order][]**<br>**`unspecified`**<br>`ignore`<br>`bottom`<br><br>-<br><br><br><br>`array`<br>`array of objects`<br>`alphabetical`<br>`array of objects` [concentric][]<br>`arrray` [recess][]<br>`array of objects` [smacss][]<br><br>**`emptyLineBefore`**<br>`true`<br>`false` |
-| **[PropertySpelling][]** *enabled*<br> **`extra_properties`**<br>`array`<br><br>**`disabled_properties`**<br>`array` | - |
-| **[PropertyUnits][]** *enabled*<br>**`global`**<br>`array` *default `[all, units, ...]`*<br><br>**`properties`**<br>`object` *default `{}`* | **[unit-whitelist][]** / **[property-unit-whitelist][]**<br>**`unit-whitelist`**<br>`array`<br><br>**`property-unit-whitelist`**<br>`object` |
+| **[PropertySpelling][]** *enabled*<br> **`extra_properties`**<br>`array`<br><br>**`disabled_properties`**<br>`array` | **[property-unknown][]** `true`<br>(Plugin: [stylelint-property-unknown][property-unknown]) |
+| **[PropertyUnits][]** *enabled*<br>**`global`**<br>`array` *default `[all, units, ...]`*<br><br>**`properties`**<br>`object` *default `{}`* | **[unit-whitelist][]** / **[declaration-property-unit-whitelist][]**<br>**`unit-whitelist`**<br>`array`<br><br>**`declaration-property-unit-whitelist`**<br>`object` |
 | **[PseudoElement][]** *enabled*<br> | **[selector-pseudo-element-colon-notation][]** `double` |
 | **[QualifyingElement][]** *enabled*<br>**`allow_element_with_attribute`**<br>`true`<br>`false` *default*<br><br>**`allow_element_with_class`**<br>`true`<br>`false` *default*<br><br>**`allow_element_with_id`**<br>`true`<br>`false` *default* | **[selector-no-qualifying-type][]**<br>**`ignore`**<br>`array contains 'attribute'`<br>`array does not contain 'attribute'`<br><br>**`ignore`**<br>`array contains 'class'`<br>`array does not contain 'class'`<br><br>**`ignore`**<br>`array contains 'id'`<br>`array does not contain 'id'` |
 | **[SelectorDepth][]** *enabled*<br>**`max_depth`**<br>`number` *default `3`* | - |
@@ -75,10 +75,10 @@ in the table.
 | **[TrailingWhitespace][]** *enabled*<br> | **[no-eol-whitespace][]** `true` |
 | **[TrailingZero][]** *disabled*<br> | **[number-no-trailing-zeros][]** `true` |
 | **[TransitionAll][]** *disabled*<br> | - |
-| **[UnnecessaryMantissa][]** *enabled*<br> | - |
-| **[UnnecessaryParentReference][]** *enabled*<br> | - |
+| **[UnnecessaryMantissa][]** *enabled*<br> | **[number-no-trailing-zeros][]** `true` |
+| **[UnnecessaryParentReference][]** *enabled*<br> | **[selector-no-redundant-nesting-selector][]** `true`<br>(Plugin: [stylelint-scss][selector-no-redundant-nesting-selector]) |
 | **[UrlFormat][]** *enabled*<br> | - |
-| **[UrlQuotes][]** *enabled*<br> | **[function-url-quotes][]** `single|double (use value from StringQuotes)` |
+| **[UrlQuotes][]** *enabled*<br> | **[function-url-quotes][]** `always|never` (single or double determined by `string-quotes`) |
 | **[VariableForProperty][]** *disabled*<br>**`properties`**<br>`array` | - |
 | **[VendorPrefix][]** *enabled*<br><br><br><br><br>**`identifier_list`**<br>`base` *default*<br>`bourbon`<br>`array`<br><br>**`additional_identifiers`**<br>`array` *default `[]`*<br><br>**`excluded_identifiers`**<br>`array` *default `[]`* | **[property-no-vendor-prefix][]** `true` / <br> **[selector-no-vendor-prefix][]** `true` /<br>**[media-feature-name-no-vendor-prefix][]** `true` /<br>**[at-rule-no-vendor-prefix][]** `true` /<br>**[value-no-vendor-prefix][]** `true`<br>-<br><br><br><br><br>-<br><br><br>-<br><br> |
 | **[ZeroUnit][]** *enabled*<br> | **[number-zero-length-no-unit][]** `true` | 
@@ -99,61 +99,67 @@ table-cell-padding-->
 [debugstatement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#debugstatement
 [declarationorder]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#declarationorder
 [disablelinterreason]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#disablelinterreason
-[duplicateproperty]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#duplicateproperty
-[elseplacement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#elseplacement
-[emptylinebetweenblocks]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#emptylinebetweenblocks
-[emptyrule]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#emptyrule
-[extenddirective]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#extenddirective
-[finalnewline]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#finalnewline
-[hexlength]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#hexlength
-[hexnotation]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#hexnotation
-[hexvalidation]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#hexvalidation
-[idselector]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#idselector
-[importantrule]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#importantrule
-[importpath]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#importpath
-[indentation]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#indentation
-[leadingzero]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#leadingzero
-[mergeableselector]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#mergeableselector
-[nameformat]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#nameformat
-[nestingdepth]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#nestingdepth
-[placeholderinextend]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#placeholderinextend
-[privatenamingconvention]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#privatenamingconvention
-[propertycount]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#propertycount
-[propertysortorder]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#propertysortorder
-[propertyspelling]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#propertyspelling
-[propertyunits]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#propertyunits
-[pseudoelement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#pseudoelement
-[qualifyingelement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#qualifyingelement
-[selectordepth]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#selectordepth
-[selectorformat]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#selectorformat
-[shorthand]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#shorthand
-[singlelineperproperty]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#singlelineperproperty
-[singlelineperselector]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#singlelineperselector
-[spaceaftercomma]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spaceaftercomma
-[spaceafterpropertycolon]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spaceafterpropertycolon
-[spaceafterpropertyname]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spaceafterpropertyname
-[spaceaftervariablecolon]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spaceaftervariablecolon
-[spaceaftervariablename]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spaceaftervariablename
-[spacearoundoperator]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spacearoundoperator
-[spacebeforebrace]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spacebeforebrace
-[spacebetweenparens]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#spacebetweenparens
-[stringquotes]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#stringquotes
-[trailingsemicolon]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#trailingsemicolon
-[trailingwhitespace]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#trailingwhitespace
-[trailingzero]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#trailingzero
-[transitionall]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#transitionall
-[unnecessarymantissa]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#unnecessarymantissa
-[unnecessaryparentreference]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#unnecessaryparentreference
-[urlformat]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#urlformat
-[urlquotes]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#urlquotes
-[variableforproperty]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#variableforproperty
-[vendorprefix]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#vendorprefix
-[zerounit]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/readme.md#zerounit
+[duplicateproperty]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#duplicateproperty
+[elseplacement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#elseplacement
+[emptylinebetweenblocks]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#emptylinebetweenblocks
+[emptyrule]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#emptyrule
+[extenddirective]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#extenddirective
+[finalnewline]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#finalnewline
+[hexlength]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#hexlength
+[hexnotation]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#hexnotation
+[hexvalidation]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#hexvalidation
+[idselector]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#idselector
+[importantrule]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#importantrule
+[importpath]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#importpath
+[indentation]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#indentation
+[leadingzero]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#leadingzero
+[mergeableselector]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#mergeableselector
+[nameformat]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#nameformat
+[nestingdepth]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#nestingdepth
+[placeholderinextend]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#placeholderinextend
+[privatenamingconvention]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#privatenamingconvention
+[propertycount]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#propertycount
+[propertysortorder]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#propertysortorder
+[propertyspelling]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#propertyspelling
+[propertyunits]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#propertyunits
+[pseudoelement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#pseudoelement
+[qualifyingelement]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#qualifyingelement
+[selectordepth]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#selectordepth
+[selectorformat]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#selectorformat
+[shorthand]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#shorthand
+[singlelineperproperty]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#singlelineperproperty
+[singlelineperselector]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#singlelineperselector
+[spaceaftercomma]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spaceaftercomma
+[spaceafterpropertycolon]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spaceafterpropertycolon
+[spaceafterpropertyname]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spaceafterpropertyname
+[spaceaftervariablecolon]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spaceaftervariablecolon
+[spaceaftervariablename]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spaceaftervariablename
+[spacearoundoperator]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spacearoundoperator
+[spacebeforebrace]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spacebeforebrace
+[spacebetweenparens]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#spacebetweenparens
+[stringquotes]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#stringquotes
+[trailingsemicolon]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#trailingsemicolon
+[trailingwhitespace]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#trailingwhitespace
+[trailingzero]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#trailingzero
+[transitionall]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#transitionall
+[unnecessarymantissa]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#unnecessarymantissa
+[unnecessaryparentreference]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#unnecessaryparentreference
+[urlformat]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#urlformat
+[urlquotes]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#urlquotes
+[variableforproperty]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#variableforproperty
+[vendorprefix]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#vendorprefix
+[zerounit]: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#zerounit
 
 [declaration-bang-space-before]: https://github.com/stylelint/stylelint/blob/master/src/rules/declaration-bang-space-before/README.md
 [declaration-bang-space-after]: https://github.com/stylelint/stylelint/blob/master/src/rules/declaration-bang-space-after/README.md
 [color-named]: https://github.com/stylelint/stylelint/blob/master/src/rules/color-named/README.md
 [declaration-use-variable]: https://github.com/sh-waqar/stylelint-declaration-use-variable
+[property-value-blacklist]: https://github.com/stylelint/stylelint/blob/master/src/rules/property-value-blacklist/README.md
+[property-unknown]: https://github.com/timothyneiljohnson/stylelint-property-unknown
+[stylelint-scss]: https://github.com/kristerkari/stylelint-scss
+[at-import-no-partial-extension]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-extension/README.md
+[at-import-no-partial-leading-underscore]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md
+[selector-no-redundant-nesting-selector]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-redundant-nesting-selector/README.md
 [stylelint-disable-reason]: https://github.com/stylelint/stylelint/blob/master/src/rules/stylelint-disable-reason/README.md
 [declaration-block-no-duplicate-properties]: https://github.com/stylelint/stylelint/blob/master/src/rules/declaration-block-no-duplicate-properties/README.md
 [rule-nested-empty-line-before]: https://github.com/stylelint/stylelint/blob/master/src/rules/rule-nested-empty-line-before/README.md
@@ -174,7 +180,7 @@ table-cell-padding-->
 [recess]: https://github.com/brigade/scss-lint/blob/master/data/property-sort-orders/recess.txt
 [smacss]: https://github.com/brigade/scss-lint/blob/master/data/property-sort-orders/smacss.txt
 [unit-whitelist]: https://github.com/stylelint/stylelint/blob/master/src/rules/unit-whitelist/README.md
-[property-unit-whitelist]: https://github.com/stylelint/stylelint/blob/master/src/rules/property-unit-whitelist/README.md
+[declaration-property-unit-whitelist]: https://github.com/stylelint/stylelint/blob/master/src/rules/declaration-property-unit-whitelist/README.md
 [selector-pseudo-element-colon-notation]: https://github.com/stylelint/stylelint/blob/master/src/rules/selector-pseudo-element-colon-notation/README.md
 [selector-no-qualifying-type]: https://github.com/stylelint/stylelint/blob/master/src/rules/selector-no-qualifying-type/README.md
 [selector-class-pattern]: https://github.com/stylelint/stylelint/blob/master/src/rules/selector-class-pattern/README.md
