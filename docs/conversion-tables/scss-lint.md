@@ -43,7 +43,7 @@ in the table.
 | **[HexValidation][]** *enabled*<br> | **[color-no-invalid-hex][]** `true` |
 | **[IdSelector][]** *enabled* | **[selector-no-id][]** `true` |
 | **[ImportantRule][]** *enabled* | **[declaration-no-important][]** `true` |
-| **[ImportPath][]** *enabled*<br>**`leading_underscore`**<br>`true`<br>`false` *default*<br><br>**`filename_extension`**<br>`true`<br>`false` *default* | Plugin: [stylelint-scss][stylelint-scss]<br>[at-import-no-partial-leading-underscore][]<br>`true`<br><br>[at-import-no-partial-extension][]<br>`true`<br> |
+| **[ImportPath][]** *enabled*<br>**`leading_underscore`**<br>`true`<br>`false` *default*<br><br>**`filename_extension`**<br>`true`<br>`false` *default* | Plugin: [stylelint-scss][stylelint-scss]<br>[at-import-no-partial-leading-underscore][]<br>`true`<br><br>**[at-import-partial-extension-blacklist][]** / **[at-import-partial-extension-whitelist][]** |
 | **[Indentation][]** *enabled*<br>**`allow_non_nested_indentation`**<br>`true`<br>`false` *default*<br><br>**`character`**<br>`tab`<br>`space` *default*<br><br>**`width`**<br>`number` *default: `2`* | **[indentation][stylelint-indentation]**<br>**`hierarchicalSelectors`**<br>`true`<br>`false`<br><br><br>`tab`<br>`number`<br><br><br>`number` |
 | **[LeadingZero][]** *enabled*<br>**`style`**<br>`exlude_zero` *default*<br>`include_zero` | **[number-leading-zero][]**<br><br>`never`<br>`always` |
 | **[MergeableSelector][]** *enabled*<br>**`force_nesting`**<br>`true` *default*<br>`false`<br><br>**`whitelist`**<br>`array` | **[no-duplicate-selectors][]** `true`<br>-<br><br><br><br>-<br><br> |
@@ -157,7 +157,8 @@ table-cell-padding-->
 [property-value-blacklist]: https://github.com/stylelint/stylelint/blob/master/src/rules/property-value-blacklist/README.md
 [property-unknown]: https://github.com/timothyneiljohnson/stylelint-property-unknown
 [stylelint-scss]: https://github.com/kristerkari/stylelint-scss
-[at-import-no-partial-extension]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-extension/README.md
+[at-import-partial-extension-blacklist]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist/README.md
+[at-import-partial-extension-whitelist]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist/README.md
 [at-import-no-partial-leading-underscore]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md
 [selector-no-redundant-nesting-selector]: https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-redundant-nesting-selector/README.md
 [stylelint-disable-reason]: https://github.com/stylelint/stylelint/blob/master/src/rules/stylelint-disable-reason/README.md
