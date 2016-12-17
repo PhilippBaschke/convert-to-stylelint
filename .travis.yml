@@ -4,9 +4,9 @@ sudo: false
 # Node versions
 language: node_js
 node_js:
-  - '6' # Current
-  - '4' # LTS
-  - '0.12' # Legacy
+  - '7' # Current
+  - '6' # LTS/Boron
+  - '4' # LTS/Argon
 
 # Coveralls
 after_success: npm run coverage
