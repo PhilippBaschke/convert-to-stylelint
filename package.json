@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Automatically convert linter configurations to a stylelint configuration.",
   "main": "lib/index.js",
+  "bin": "bin/convert-to-stylelint.js",
   "engines": {
     "node": ">=4"
   },
@@ -71,5 +72,8 @@
       "/node_modules",
       "/lib/"
     ]
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
   }
 }
