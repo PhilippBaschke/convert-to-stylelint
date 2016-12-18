@@ -172,7 +172,7 @@ rules:
   operator-assignment: error
   operator-linebreak: error
   padded-blocks: [error, never]
-  quote-props: error
+  quote-props: [error, consistent-as-needed]
   quotes: [error, single, {avoidEscape: true, allowTemplateLiterals: true}]
   require-jsdoc: warn
   semi: [error, never]
