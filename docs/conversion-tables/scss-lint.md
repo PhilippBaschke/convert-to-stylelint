@@ -14,7 +14,7 @@ in the table.
 | **exclude**<br>`'app/assets/stylesheets/plugins/**'` | **ignoreFiles**<br>`'app/assets/stylesheets/plugins/**'` or `array` |
 | **plugin_directories**<br>`['.scss-linters']` *default* | **plugin**<br>`array` |
 | **plugin_gems**<br>`[]` *default* | **plugin**<br>`array` |
-| **severity**<br>`warning` *default*<br>`error` | **severity** (per rule)<br>`warning`<br>`error` *default* |
+| **severity**<br>`warning` *default*<br>`error` | **severity** (per rule)<br>`warning`<br>`error` *default*<br>**defaultSeverity**<br>`warning`<br>`error` |
 | **Linters**<br>`object` | **rules**<br>`object` |
 
 ## Rules
